@@ -104,6 +104,7 @@ section {
     padding: 10px;
     width: 200px;
     text-align: left;
+    
 }
 
 .menu-item img, .cart-item img {
@@ -118,6 +119,34 @@ button {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+#addtocart{
+    border-radius: 15px;
+    margin-left: 25px;
+}
+
+#del{
+    border-radius: 15px;
+    margin-top: 5px;
+}
+
+.cart1{
+    text-align: center;
+}
+
+#checkout{
+    border-radius: 10px;
+}
+
+#plus,#minus{
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+#sp1{
+    padding: 5px;
 }
 
 button:disabled {

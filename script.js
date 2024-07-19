@@ -1,17 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuItems = [
-        { id: 1, name: 'Pizza', price: 12, img: 'pizza.jpg' },
-        { id: 2, name: 'Burger', price: 8, img: 'burger.jpg' },
-        { id: 3, name: 'Pasta', price: 10, img: 'pasta.jpg' },
-        { id: 4, name: 'Sushi', price: 15, img: 'sushi.jpg' },
-        { id: 1, name: 'Pizza', price: 12, img: 'pizza.jpg' },
-        { id: 2, name: 'Burger', price: 8, img: 'burger.jpg' },
-        { id: 3, name: 'Pasta', price: 10, img: 'pasta.jpg' },
-        { id: 4, name: 'Sushi', price: 15, img: 'sushi.jpg' },
-        { id: 1, name: 'Pizza', price: 12, img: 'pizza.jpg' },
-        { id: 2, name: 'Burger', price: 8, img: 'burger.jpg' },
-        { id: 3, name: 'Pasta', price: 10, img: 'pasta.jpg' },
-        { id: 4, name: 'Sushi', price: 15, img: 'sushi.jpg' }
+        { id: 1, name: 'Pizza', price: 299, img: 'pizza.jpg' },
+        { id: 2, name: 'Burger', price: 199, img: 'burger.jpg' },
+        { id: 3, name: 'Pasta', price: 259, img: 'pasta.jpg' },
+        { id: 4, name: 'Sushi', price: 449, img: 'sushi.jpg' },
+        { id: 5, name: 'Spaghetti', price: 259, img: 'spaghetti.jpg' },
+        { id: 6, name: 'French Fries', price: 199, img: 'fries.jpeg' },
+        { id: 7, name: 'Choco Lava Cake', price: 149, img: 'chocolava.jpg' }
     ];
 
     const cart = [];
@@ -31,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="${item.img}" alt="${item.name}">
                 <h3>${item.name}</h3>
                 <p>₹ ${item.price}</p>
-                <button onclick="addToCart(${item.id})">Add to Cart</button>
+                <button id="addtocart" onclick="addToCart(${item.id})">Add to Cart</button>
             `;
             menuContainer.appendChild(menuItem);
         });
@@ -45,12 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItem.innerHTML = `
                 <img src="${item.img}" alt="${item.name}">
                 <h3>${item.name}</h3>
-                <p>$${item.price}</p>
-                <div>
-                    <button onclick="updateCart(${item.id}, -1)">-</button>
-                    <span>${item.quantity}</span>
-                    <button onclick="updateCart(${item.id}, 1)">+</button>
-                    <button onclick="removeFromCart(${item.id})">Delete</button>
+                <p>₹${item.price}</p>
+                <div class="cart1">
+                    <button id="minus" onclick="updateCart(${item.id}, -1)">-</button>
+                    <span id="sp1">${item.quantity}</span>
+                    <button id="plus" onclick="updateCart(${item.id}, 1)">+</button>
+                    <button id="del" onclick="removeFromCart(${item.id})">Delete</button>
                 </div>
             `;
             cartContainer.appendChild(cartItem);
